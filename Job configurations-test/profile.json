@@ -7,36 +7,38 @@
 		"StepConfig": null,
 		"EventId": 3321,
 		"Task": "Duplicate Transactions",
-		"TaskConfig": {
-			"allFieldsFlag": true,
-			"isInsertEventSelected": true,
-			"columnsToChecks": [
-				{
-					"columnName": "BUSINESS_GROUP_DESC",
-					"displayName": "BU Group"
-				},
-				{
-					"columnName": "BUSINESS_GROUP_DESC_2",
-					"displayName": "BU Group 2"
-				},
-				{
-					"columnName": "BUSINESS_GROUP_DESC_3",
-					"displayName": "BU Group 3"
-				},
-				{
-					"columnName": "BUSINESS_GROUP_DESC_4",
-					"displayName": "BU Group 4"
-				},
-				{
-					"columnName": "BUSINESS_GROUP_DESC_5",
-					"displayName": "BU Group 5"
-				},
-				{
-					"columnName": "BUSINESS_UNIT_DESC",
-					"displayName": "Business Unit"
-				}
-			]
-		},
+		"TaskConfig": [
+			{
+				"allFieldsFlag": true,
+				"isInsertEventSelected": true,
+				"columnsToChecks": [
+					{
+						"columnName": "BUSINESS_GROUP_DESC",
+						"displayName": "BU Group"
+					},
+					{
+						"columnName": "BUSINESS_GROUP_DESC_2",
+						"displayName": "BU Group 2"
+					},
+					{
+						"columnName": "BUSINESS_GROUP_DESC_3",
+						"displayName": "BU Group 3"
+					},
+					{
+						"columnName": "BUSINESS_GROUP_DESC_4",
+						"displayName": "BU Group 4"
+					},
+					{
+						"columnName": "BUSINESS_GROUP_DESC_5",
+						"displayName": "BU Group 5"
+					},
+					{
+						"columnName": "BUSINESS_UNIT_DESC",
+						"displayName": "Business Unit"
+					}
+				]
+			}
+		],
 		"Subtasks": null,
 		"IsSelected": true,
 		"Status": null,
