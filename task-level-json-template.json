@@ -1,0 +1,14 @@
+{
+	"JobId": "job Id in string",
+	"ActivityId": "activity ID in string",
+	"StageId": 0,
+	"Step": "string",
+	"StepConfig": [{}, {}],
+	"EventId": 0,
+	"Task": "string",
+	"TaskConfig": [{}, {}],
+	"Subtasks": null, --undecided
+	"IsSelected": false,
+	"Status": "string",
+	"SequenceId": 0,
+}
