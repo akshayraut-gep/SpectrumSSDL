@@ -1,0 +1,69 @@
+[
+	{
+		"JobId": "2095",
+		"ActivityId": "2200",
+		"StageId": 2220,
+		"Step": "Moving to main table",
+		"StepConfig": null,
+		"EventId": 2221,
+		"Task": "Insert into OPS_MAIN from CommonExcelCSV",
+		"TaskConfig": [
+			{
+				"columnList": [
+					{
+						"isSelected": false,
+						"isEditMode": false,
+						"isFiltered": false,
+						"isCheckBoxDisabled": false,
+						"mainTableColumn": "BUSINESS_GROUP_DESC_4",
+						"sourceTableSchemaId": 3960,
+						"mainTableDataType": "Nvarchar",
+						"sourceTableColumn": "year",
+						"sourceTableDataType": "Nvarchar",
+						"searchText": ""
+					}
+				],
+				"sourceTable": "CommonExcelCSV",
+				"sourceTableId": 177,
+				"action": "INSERT",
+				"updateList": [],
+				"jobPeriodId": null,
+				"updateCondition": []
+			}
+		],
+		"Subtasks": null,
+		"IsSelected": true,
+		"Status": null,
+		"SequenceId": 1
+	},
+	{
+		"JobId": "2095",
+		"ActivityId": "2200",
+		"StageId": 2230,
+		"Step": "Cleansing",
+		"StepConfig": [
+			{
+				"keyValue": "Convert to UPPERCASE",
+				"keyKeySequence": "3",
+				"activityValue": ""
+			},
+			{
+				"keyValue": "Blank to NULL",
+				"keyKeySequence": "4",
+				"activityValue": ""
+			},
+			{
+				"keyValue": "Remove from numeric columns",
+				"keyKeySequence": "4",
+				"activityValue": "COL_1,COL_2,"
+			}
+		],
+		"EventId": 2231,
+		"Task": null,
+		"TaskConfig": null,
+		"Subtasks": null,
+		"IsSelected": true,
+		"Status": null,
+		"SequenceId": 2
+	}
+]

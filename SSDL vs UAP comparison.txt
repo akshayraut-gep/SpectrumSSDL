@@ -1,0 +1,44 @@
+Why Airflow?
+1. Scheduling
+2. orchestration
+3. cloud agnostic
+4. 
+
+1. ADB creates a table on data lake
+	and pushes the table schema to .NET by calling its API which gets stored in Mongo DB
+	UI shows same tables from MongoDB.
+2. When user uploads a file from UI and it gets stored in cloud storage.
+3. In UAP, a source table can only be created specific to Excel/Text files.
+	It can't get data from both file types.
+4. One excel file can only be created from one sheet.
+5. Different excel sheets will be used for creating different source tables.
+6. Creating a source table and loading data in it can be done out of the workflow.
+But SSDL allows saving the workflow and then import when user wants by running the job.
+
+Questions:
+1. Load Data can be made separate to load data in source tables i.e. out of the workflow.
+And workflow can be made to include only from Consolidation to Publish.
+2. Airflow DAG accepts a configuration for scheduling file picking activity from FTP.
+.Net can supply this configuration to Airflow.
+
+Data source:
+1. There is profiling after every workflow step in Analytics UAP.
+2. Profiling vs Preview.
+Profiling: ADB provides histogram of data. It shows how many data is duplicate by scanning all columns.
+Preview: .NET runs Hive query to get the preview of data from ADB, some top 100 or 1000.
+
+Many data operations are allowed before saving a job in Analytics UAP.
+In such cases, user can lose configurations if they are logged out of the system or refresh the screen.
+
+Analytics UAP doesn't call ADB Job collectively, rather it calls ADB for every step individually.
+In SSDL, we combine all steps and then call ADB for collective operation.
+User can select to remove null values and it will instantly add a chip in the workflow design on UI
+	and will get called when current chip execution completes.
+All this is happening before saving the workflow.
+
+Once you save all the configuration gets saved in MongoDB.
+Then if you run this workflow then a DAG is created.
+
+We need this library to connect to MongoDB.
+using leo.storage.nosql.client;
+
